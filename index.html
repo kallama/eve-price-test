@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect();
+
+      socket.on('plexMin', function(data){
+        console.log('plex min: ' + data);
+        $('#plexMin').text(numeral(data).format('0,0[.]00'));
+        $("#plexMin").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+      });
+      socket.on('plexMax', function(data){
+        console.log('plex max: ' + data);
+        $('#plexMax').text(numeral(data).format('0,0[.]00'));
+        $("#plexMax").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+      });
+    </script>
+</head>
+<body>
+<h1>Live Jita Plex Price using EMDR and Socket.IO</h1>
+<img src="https://image.eveonline.com/Type/29668_64.png"/>
+<br>
+Sell: <span id='plexMin'>waiting for data</span>
+<br>
+Buy: <span id='plexMax'>waiting for data</span>
+</body>
+</html>

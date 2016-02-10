@@ -1,0 +1,27 @@
+{
+  "name": "eve-price-test",
+  "version": "0.0.1",
+  "description": "Test realtime EVE item pricing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kallama/eve-price-test.git"
+  },
+  "keywords": [
+    "eve"
+  ],
+  "author": "kalam <chris@m6u.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kallama/eve-price-test/issues"
+  },
+  "homepage": "https://github.com/kallama/eve-price-test#readme",
+  "dependencies": {
+    "zmq": "2.14.0",
+    "underscore": "1.8.3",
+    "socket.io": "1.4.5"
+  }
+}
